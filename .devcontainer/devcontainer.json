@@ -3,9 +3,12 @@
 	"dockerFile": "Dockerfile",
 	"build": {
 		"args": {
-			"WORKSPACE": "${containerWorkspaceFolder}"
+			"WORKSPACE": "/opt/ros/foxy"
 		}
 	},
+ "context" : "..",
+ "workspaceFolder" : "/home/ros/ros2_ws",
+ "workspaceMount": "source=/home/pi/ros2_ws,target=/home/ros/ros2_ws,type=bind,consistency=cached",
 	"remoteUser": "ros",
 	"runArgs": [
 		"--network=host",
